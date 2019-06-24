@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<meta http-equiv="Content-Security-Policy" content="">
+        <script type="text/javascript" src="cordova.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+    	<script type="text/javascript" id="jqm-trans-disable">
+            /* For having a faster transition */
+            $(document).on("mobileinit", function() {
+                            $.mobile.defaultPageTransition = "none";
+                            $.mobile.defaultDialogTransition = "none";
+            });
+        </script>
+        <title>Taxi Sharing</title>
+    </head>
+    <body>
+    <div class="app">
+			<h1>Taxi Sharing</h1>
+			<!-- TODO 1(b)(i)-(v) Function buttons:
+			(i) register
+			(ii) volunteer
+			(iii) request
+			(iv) cancel
+			(v) update
+			//-->
+
+			<!-- Question 1 b start-->
+			<div data-role="controlgroup" data-type="horizontal">
+            <!-- TODO I. Register -->
+            OUCU: 
+			<input type="text" id="name"> 
+			<button type =button id ="register" onclick="app.taxiShare.register()">Register</button>
+	        </div>
+			
+			<div data-role="controlgroup" data-type="horizontal" 		>
+            <!-- TODO II. Volunteer -->
+			Starting time:
+			<input type="text" id="time"> 
+			Ending time:
+			<input type="text" id="hours"> 
+			Pick up address:
+			<input type="text" id="addr"> 
+			<button type=button id ="volunteer" onclick="app.taxiShare.volunteer()">Volunteer</button>
+	        </div>
+			
+			<div data-role="controlgroup" data-type="horizontal">
+            <!-- TODO III. Request -->
+			<button type=button id ="request" onclick="app.taxiShare.request()">Request</button>
+	        </div>
+			
+			<div data-role="controlgroup" data-type="horizontal">
+            <!-- TODO IV. Cancel -->
+			<button type =button id ="cancel" onclick="app.taxiShare.cancel()">Cancel</button>
+	        </div>
+			
+			<div data-role="controlgroup" data-type="horizontal">
+            <!-- TODO V. Update -->
+			<button type =button id ="updateMap" onclick="app.taxiShare.update()">Update</button>
+	        </div>
+			<!-- Question 1 b end-->
+			
+			<!-- Question 1 c start-->
+			<!-- TODO 1(c) Map canvas -->
+			<!-- Question 1 c end-->
+    </div>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js" charset="utf-8"></script>
+  <script type="text/javascript" src="http://js.api.here.com/v3/3.0/mapsjs-ui.js" charset="utf-8"></script>
+  <script type="text/javascript" src="http://js.api.here.com/v3/3.0/mapsjs-pano.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="http://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+  <script src="js/index.js"></script>
+ </body>
+</html>
